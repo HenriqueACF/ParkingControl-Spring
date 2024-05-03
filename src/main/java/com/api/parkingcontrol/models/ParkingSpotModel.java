@@ -14,7 +14,7 @@ public class ParkingSpotModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false)
+//    @Column(nullable = false)
     private UUID id;
 
     @Column(nullable = false, unique = true, length = 10)
@@ -39,7 +39,7 @@ public class ParkingSpotModel implements Serializable {
     private String responsibleName;
 
     @Column(nullable = false, length = 30)
-    private String apartament;
+    private String apartment;
 
     @Column(nullable = false, length = 30)
     private String block;
@@ -109,11 +109,11 @@ public class ParkingSpotModel implements Serializable {
     }
 
     public String getApartament() {
-        return apartament;
+        return apartment;
     }
 
     public void setApartament(String apartament) {
-        this.apartament = apartament;
+        this.apartment = apartament;
     }
 
     public String getBlock() {
